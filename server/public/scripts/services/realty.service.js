@@ -2,13 +2,14 @@ myApp.service('RealtyService', function($http) {
     console.log('realty service sourced');
 
     var self = this;
-    self.rentals = {data: []};
-    self.listings = {data: []};
+    self.rentals = {result: []};
+    self.listings = {result: []};
 
     self.getRentals = function() {
         $http.get('/rental').then(function(response) {
-            console.log('found rentals', response);
-            self.rentals.data = response.data;
+            console.log('found rentals', response.data);
+            self.rentals.result = response.data;
+            console.log('rental result in service', self.rentals.result);
         }).catch(function(err) {
             console.log('get didn\'t work!', err);
         })
@@ -17,10 +18,10 @@ myApp.service('RealtyService', function($http) {
     self.getListings = function() {
         $http.get('/listing').then(function(response) {
             console.log('found listings', response);
-            self.listings.data = response.data;
+            self.listings.result = response.data;
         }).catch(function(err) {
             console.log('get didn\'t work!', err);
         })
     }
-
+   
 })
