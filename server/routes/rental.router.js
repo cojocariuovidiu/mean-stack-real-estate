@@ -19,5 +19,20 @@ router.get('/', function(req, res) {
         }); //end FIND
 }); //end GET route
 
+//POST route
+router.post('/', function(req, res) {
+    var rentalToAdd = new Rental(req.body);
+    console.log('rental posted', rentalToAdd);
+    rentalToAdd.save(function(err, data){
+        if(err) {
+            console.log(err);
+            res.sendStatus(500)
+        } else {
+            res.sendStatus(201);
+        }
+    })
+})
+
+
 
 module.exports = router; 

@@ -19,4 +19,18 @@ router.get('/', function(req, res) {
         }); //end FIND
 }); //end GET route
 
+//POST route
+router.post('/', function(req, res) {
+    var listingToAdd = new Listing(req.body);
+    console.log('listing posted', listingToAdd);
+    listingToAdd.save(function(err, data){
+        if(err) {
+            console.log(err);
+            res.sendStatus(500)
+        } else {
+            res.sendStatus(201);
+        }
+    })
+})
+
 module.exports = router;

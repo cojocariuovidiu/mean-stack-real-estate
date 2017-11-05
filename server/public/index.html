@@ -9,20 +9,33 @@
     <script src="scripts/client.js"></script>
     <script src="scripts/controllers/rental.controller.js"></script>
     <script src="scripts/controllers/listing.controller.js"></script>
+    <script src="scripts/controllers/index.controller.js"></script>
     <script src="scripts/services/realty.service.js"></script>
     <link rel="stylesheet" href="vendors/css/bootstrap.css">
     <link rel="stylesheet" href="styles/style.css">
     <title>Weekend Challenge 5</title>
 </head>
-<body ng-app="myApp">
+<body ng-app="myApp" ng-controller="IndexController as index">
     <h1>Weekend Challenge 5</h1>
     <p>Is angular working?</p> {{4 === 4}}
     <br>
+    <h2>Add a Listing!</h2>
+    <form ng-submit="index.addListing(index.newListing)">
+        <label for="listingType">Listing Type</label>
+        <select ng-model="index.newListing.type" id="listingType">
+            <option value="Rent">Property for Rent</option>
+            <option value="Cost">Property for Sale</option>
+        </select>
+        <label for="cost">{{index.newListing.type}} </label>
+        <input type="text" ng-model="index.newListing.cost" id="cost" placeholder={{index.newListing.type}} />
+        <label for="sqft">Square Feet </label>
+        <input type="text" ng-model="index.newListing.sqft" id="sqft" placeholder="Square Feet" />
+        <label for="city">City: </label>
+        <input type="text" ng-model="index.newListing.city" id="city" placeholder="City" />
+        <button class="btn btn-primary">Add Listing</button>
+    </form>
     <a href="/#!/rental">View Properties for Rent</a>
     <a href="/#!/listing">View Properties for Sale</a>
     <main ng-view></main>
-
-
-
 </body>
 </html>

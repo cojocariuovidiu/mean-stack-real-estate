@@ -1,8 +1,8 @@
 <div>
     <h2>Properties For Sale</h2>
-    <div ng-repeat="listingProperty in listing.listings.result">
-        Cost: {{listingProperty.cost}}
-        Square Feet: {{listingProperty.sqft}}
+    <div class="forSale" ng-repeat="listingProperty in listing.listings.result">
+        Cost: {{listingProperty.cost | currency}}
+        Square Feet: {{listingProperty.sqft}} ft<sup>2</sup>
         City: {{listingProperty.city}}
     </div>
 
