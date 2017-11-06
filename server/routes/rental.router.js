@@ -8,7 +8,7 @@ var Rental = mongoose.model('Rental', rentalSchema, 'rentals');
 
 //GET route
 router.get('/', function(req, res) {
-    Rental.find({} , null, {sort: {cost: +1}},  function(err, foundRentals) {
+    Rental.find({} , null, {sort: {rent: +1}},  function(err, foundRentals) {
         if (err) {
             console.log('Error: ', err);
             res.sendStatus(500);

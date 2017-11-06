@@ -40,8 +40,13 @@ myApp.service('RealtyService', function($http) {
                 console.log('rental post didn\'t work!', err);
             })
         } else if (newListing.type === "Cost") {
-            console.log('it\'s for sale!');
-            $http.post('/listing', newListing).then(function(response) {
+            var listingToSend = {
+                cost: newListing.cost,
+                sqft: newListing.sqft,
+                city: newListing.city
+            }
+            console.log('it\'s for sale!', listingToSend);
+            $http.post('/listing', listingToSend).then(function(response) {
                 console.log('new listing post', response)
                 self.getListings();
             }).catch(function(err) {

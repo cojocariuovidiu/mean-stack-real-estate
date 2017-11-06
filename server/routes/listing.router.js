@@ -22,6 +22,7 @@ router.get('/', function(req, res) {
 //POST route
 router.post('/', function(req, res) {
     var listingToAdd = new Listing(req.body);
+    console.log('req.body', req.body);
     console.log('listing posted', listingToAdd);
     listingToAdd.save(function(err, data){
         if(err) {
