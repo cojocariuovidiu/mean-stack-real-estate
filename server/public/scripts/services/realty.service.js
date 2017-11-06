@@ -63,5 +63,14 @@ myApp.service('RealtyService', function($http) {
             console.log('Failure!');
         });
     }
+
+    self.deleteRental = function(rentalId) {
+        $http.delete('/rental/' + rentalId).then(function (response) {
+            console.log('Success!');
+            self.getRentals();
+        }).catch(function (error) {
+            console.log('Failure!');
+        });
+    }
 })
 

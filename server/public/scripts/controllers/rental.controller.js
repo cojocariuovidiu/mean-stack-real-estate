@@ -6,7 +6,11 @@ myApp.controller('RentalController', function(RealtyService) {
     RealtyService.getRentals();
     rental.rentals = RealtyService.rentals; 
    
-    console.log('rentals in controller', rental.rentals);
+    rental.deleteRental = function(rentalId) {
+        RealtyService.deleteRental(rentalId);
+        console.log('delete');
+    }
+    
 
     
 })

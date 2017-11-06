@@ -6,6 +6,7 @@
             Rent: {{rentalProperty.rent | currency}} <br>
             Square Feet: {{rentalProperty.sqft}} ft<sup>2</sup> <br>
             City: {{rentalProperty.city}} <br>
+            <button ng-click="rental.deleteRental(rentalProperty._id)" class="btn btn-danger">Delete Rental</button>
         </div>
     </div>
    
