@@ -1,9 +1,15 @@
 <div>
     <h2>Properties For Sale</h2>
-    <div class="forSale" ng-repeat="listingProperty in listing.listings.result">
-        Cost: {{listingProperty.cost | currency}}
-        Square Feet: {{listingProperty.sqft}} ft<sup>2</sup>
-        City: {{listingProperty.city}}
+    <div class="row"></div>
+    <div class ="col-md-3 col-sm-3 col-lg-3 forSale" 
+    ng-repeat="listingProperty in listing.listings.result"
+    ng-mouseenter="imageStyle={'background-color': 'blue'}"
+    ng-mouseleave="imageStyle={'background-color': 'rgb(35, 0, 116)'}"
+    ng-style="imageStyle"
+    >
+        Cost: {{listingProperty.cost | currency}} <br>
+        Square Feet: {{listingProperty.sqft}} ft<sup>2</sup> <br>
+        City: {{listingProperty.city}} <br>
     </div>
 
 

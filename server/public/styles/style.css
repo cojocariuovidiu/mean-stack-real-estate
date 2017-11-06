@@ -1,0 +1,27 @@
+body {
+    background-image: url("brick-background-image.jpg");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+}
+
+.header {
+    display: flex;
+}
+
+#houseIcon {
+    height: 100px;
+    width: auto;
+}
+
+.forSale {
+    height: 200px;
+    background-color: rgb(35, 0, 116);
+    margin: 10px;
+    border-radius: 10px;
+    border: 3px solid black;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+
+}
