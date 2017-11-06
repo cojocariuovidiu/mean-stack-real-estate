@@ -3,7 +3,7 @@ myApp.controller('IndexController', function(RealtyService) {
 
     var index = this;
 
-    index.newListing = {type: "Rent"};
+    // index.newListing = {type: "Rent"};
 
     index.addListing = function(newListing) {
         RealtyService.addListing(newListing);

@@ -24,8 +24,6 @@ myApp.service('RealtyService', function($http) {
         })
     }
 
-    
-
     self.addListing = function(newListing) {
         console.log('new listing: ', newListing);
         if (newListing.type === "Rent") {
