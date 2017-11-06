@@ -50,7 +50,9 @@ myApp.service('RealtyService', function($http) {
                 console.log('listing post didn\'t work!', err);
             })
         }
-      
+        newListing.cost = '';
+        newListing.sqft = '';
+        newListing.city = '';
     }
    
 })

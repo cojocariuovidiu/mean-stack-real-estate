@@ -7,6 +7,7 @@ myApp.controller('IndexController', function(RealtyService) {
 
     index.addListing = function(newListing) {
         RealtyService.addListing(newListing);
+       
     }
 
     
