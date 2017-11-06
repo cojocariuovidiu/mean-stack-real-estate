@@ -1,7 +1,7 @@
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
-var port = 5000;
+var port = process.env.PORT || 5000;
 var rental = require('./routes/rental.router.js')
 var listing = require('./routes/listing.router.js');
 var mongoURI = '';
