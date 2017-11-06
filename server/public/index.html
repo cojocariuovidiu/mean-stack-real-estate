@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,19 +17,25 @@
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <title>Weekend Challenge 5</title>
 </head>
+
 <body ng-app="myApp" ng-controller="IndexController as index">
     <div class="header">
         <div>
-           <img id="houseIcon" src="styles/house-icon.png" alt="house icon">
+            <img id="houseIcon" src="styles/house-icon.png" alt="house icon">
         </div>
         <h1>Brick House Realty</h1>
     </div>
-    <div class="viewLinks" >
-        <button class="btn btn-primary linkButton"><a class="link"href="/#!/rental">View Properties for Rent</a></button>
-        <button class="btn btn-primary linkButton"><a class="link" href="/#!/listing">View Properties for Sale</a></button>
-    </div>
-    <div class="addListing">
-        <div class="addListingDiv">
+    <div class="container">
+        <div class="viewLinks">
+            <button class="btn btn-primary linkButton">
+                <a class="link" href="/#!/rental">View Properties for Rent</a>
+            </button>
+            <button class="btn btn-primary linkButton">
+                <a class="link" href="/#!/listing">View Properties for Sale</a>
+            </button>
+        </div>
+        <div class="addListing">
+            <div class="addListingDiv">
                 <h2>Add a Listing!</h2>
                 <form ng-submit="index.addListing(index.newListing)">
                     <label for="listingType">Listing Type</label>
@@ -44,10 +51,11 @@
                     <input type="text" ng-model="index.newListing.city" id="city" placeholder="City" />
                     <button class="btn btn-primary">Add Listing</button>
                 </form>
+            </div>
         </div>
+
+        <main ng-view></main>
     </div>
-    <div></div>
-   
-    <main ng-view></main>
 </body>
+
 </html>
