@@ -8,7 +8,7 @@ var Listing = mongoose.model('Listing', listingSchema, 'listings');
 
 //GET route
 router.get('/', function(req, res) {
-    Listing.find({}, function(err, foundlistings) {
+    Listing.find({}, null, {sort: {cost: +1}}, function(err, foundlistings) {
         if (err) {
             console.log('Error: ', err);
             res.sendStatus(500);
