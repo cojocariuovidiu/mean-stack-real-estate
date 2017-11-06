@@ -33,4 +33,17 @@ router.post('/', function(req, res) {
     })
 })
 
+// DELETE Route
+router.delete('/:id', function (req, res) {
+    var listingId = req.params.id;
+    Listing.findByIdAndRemove({ "_id": listingId }, function (err, data) {
+        if (err) {
+            console.log(err);
+            res.sendStatus(500);
+        } else {
+            res.sendStatus(200);
+        }
+    });
+}); // END DELETE Route
+
 module.exports = router;

@@ -54,5 +54,14 @@ myApp.service('RealtyService', function($http) {
         newListing.sqft = '';
         newListing.city = '';
     }
-   
+
+    self.deleteListing = function(listingId) {
+        $http.delete('/listing/' + listingId).then(function (response) {
+            console.log('Success!');
+            self.getListings();
+        }).catch(function (error) {
+            console.log('Failure!');
+        });
+    }
 })
+

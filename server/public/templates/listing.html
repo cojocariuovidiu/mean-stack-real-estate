@@ -6,6 +6,7 @@
         Cost: {{listingProperty.cost | currency}} <br>
         Square Feet: {{listingProperty.sqft}} ft<sup>2</sup> <br>
         City: {{listingProperty.city}} <br>
+        <button ng-click="listing.deleteListing(listingProperty._id)" class="btn btn-danger">Delete Listing</button>
     </div>
 </div>
 </div>

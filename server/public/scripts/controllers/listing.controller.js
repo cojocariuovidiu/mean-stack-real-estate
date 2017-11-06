@@ -6,6 +6,9 @@ myApp.controller('ListingController', function(RealtyService) {
     listing.listings = RealtyService.listings; 
     console.log('listings array in controller', listing.listings);
 
+    listing.deleteListing = function(listingId) {
+        RealtyService.deleteListing(listingId);
+    }
     
 
 })

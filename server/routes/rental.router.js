@@ -33,6 +33,19 @@ router.post('/', function(req, res) {
     })
 })
 
+// DELETE Route
+router.delete('/:id', function (req, res) {
+    var rentalId = req.params.id;
+    Rental.findByIdAndRemove({ "_id": gameId }, function (err, data) {
+        if (err) {
+            console.log(err);
+            res.sendStatus(500);
+        } else {
+            res.sendStatus(200);
+        }
+    });
+}); // END DELETE Route
+
 
 
 module.exports = router; 
