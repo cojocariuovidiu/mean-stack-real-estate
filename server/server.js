@@ -40,6 +40,6 @@ mongoose.connection.on('connected', function() {
 mongoose.connection.on('error', function() {
     console.log('mongoose connection failed');
 });
-mongoose.connect(databaseUrl);
+mongoose.connect(mongoURI);
 // Eventually, the mongoose code should be in a module
 
