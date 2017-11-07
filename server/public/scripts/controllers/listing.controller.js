@@ -1,12 +1,20 @@
 myApp.controller('ListingController', function(RealtyService) {
     console.log('listing controller created');
 
-    var listing = this;
-    RealtyService.getListings();
-    listing.listings = RealtyService.listings; 
-    console.log('listings array in controller', listing.listings);
+    var vm = this;
+    
+    vm.listings = RealtyService.listings; 
+    refreshListings();
 
-    listing.deleteListing = function(listingId) {
+    // Question: Why did I have to move this into a new function instead of just calling RealtyService.getListings?
+    function refreshListings() {
+        RealtyService.getListings().then(function(response) {
+            vm.listings = response.data;
+        });
+    }
+    
+
+    vm.deleteListing = function(listingId) {
         RealtyService.deleteListing(listingId);
     }
     

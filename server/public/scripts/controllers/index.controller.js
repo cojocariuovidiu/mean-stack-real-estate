@@ -7,6 +7,10 @@ myApp.controller('IndexController', function(RealtyService) {
 
     index.addListing = function(newListing) {
         console.log('new listing', newListing);
-        RealtyService.addListing(newListing);
+        RealtyService.addListing(newListing).then(function() {
+            swal('Posted!', 'Your listing has posted.', "success");
+        }).catch(function() {
+            swal('Something went wrong.');
+        })
     }
 })
