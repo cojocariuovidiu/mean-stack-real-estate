@@ -6,14 +6,13 @@ Link to website: https://shrouded-peak-30990.herokuapp.com/
 
 ## Built With
 
-Angular
+Angular JS
 node.js
 Mongo
+Mongoose
 Express
 
 ### Prerequisites
-
-Link to software that is required before you attempt to start the app (e.g. node, mongo).
 
 - [Node.js](https://nodejs.org/en/)
 - [express]
@@ -22,11 +21,11 @@ Link to software that is required before you attempt to start the app (e.g. node
 - [Angular-route]
 - [body-parser]
 
-## To Do
-- [x] Set up HTML and source in files
-- [x] Spin up server on port 5000
-- [x] Confirm angular is working (add myApp variable to client.js)
-- [x] Set up rental and sale controllers
-- [x] Set up client-side routes to rental and sale templates
-- [x] Set up rental and sale server routers in routes folder
-- [x] Create get routes for rental and sale
+## Screen Shot
+
+![App screenshot](server/public/styles/screenshot3.png)
+
+## Completed Features
+- [x] Users can view properties for rent and for sale
+- [x] Users can add a listing
+- [x] Users can delete listings
