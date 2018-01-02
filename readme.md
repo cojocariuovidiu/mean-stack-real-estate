@@ -6,11 +6,11 @@ Link to website: https://shrouded-peak-30990.herokuapp.com/
 
 ## Built With
 
-Angular JS
-node.js
-Mongo
-Mongoose
-Express
+- Angular JS
+- node.js
+- Mongo
+- Mongoose
+- Express
 
 ### Prerequisites
 
