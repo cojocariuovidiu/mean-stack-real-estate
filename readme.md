@@ -29,4 +29,3 @@ Express
 - [x] Users can view properties for rent and for sale
 - [x] Users can add a listing
 - [x] Users can delete listings
-- [x] test 123
