@@ -1,4 +1,4 @@
-# Weekend Challenge 5 - Angular, Mongo, Mongoose Oh My!
+# MEAN Stack Real Estate Project
 
 For this project, I created a MEAN stack application that allows the user to view, add and delete real estate listings. The user can view either rental properties or properties for sale using buttons at the top of the page. The user can also add their own property to display on the list, or delete a listing. 
 
